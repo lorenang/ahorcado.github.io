@@ -1,0 +1,504 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: #F3F5FC;
+  width: 100%;
+  height: 100%;
+}
+.palabra-nueva, .canvas {
+  display: none;
+}
+
+.subrayado{
+  display:flex;
+}
+.dibujarLineas{
+  border-bottom: solid 4px #0A3871;
+  width: 30px;
+  margin: 10px;
+}
+.esconderLetra{
+  display: none;
+  font-size: 18px;
+}
+
+.logo{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
+  position: absolute;
+  width: 120px;
+  height: 48px;
+  left: 40px;
+  top: 40px;
+  display: fixed;
+}
+
+.botones-home {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: auto;
+  top: 25%;
+  left: 25%;
+  right: 25%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.btn-iniciar {
+  color: #ffffff;
+  background: #0A3871;
+  border-radius: 24px;
+  cursor: pointer;
+  width: 250px;
+  height: 70px;
+  padding: 24px;
+  margin: 10px;
+  border: 1px solid #0A3871;
+}
+
+.btn-palabra{
+  width: 200px;
+  height: 50px;
+  padding: 12px;
+  border: 1px solid #0A3871;
+  color: #0A3871;
+  border-radius: 24px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.palabra-nueva {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  height: 55%;
+}
+
+.text-input {
+  padding-left: 20%;
+  width: 60%;
+  height: auto;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 150%;
+  justify-content: baseline;
+  color: #0A3871;
+  background: transparent;
+  border: none;
+  text-transform:uppercase;
+}
+::placeholder { 
+  color: #0A3871;
+  text-transform:lowercase;
+}
+.text-input:focus { 
+  border: none;
+  outline: none;
+}
+
+.form-group{
+  position: absolute;
+  display: flex;
+  top: 65%;
+  width: auto;
+  height: 18px;
+  align-items: center;
+  left: 25%;
+}
+
+.img-alerta {
+  position: absolute;
+}
+.label-info{
+  left: 10%;
+  padding-left: 25px;
+  font-size:18px;
+  line-height: 100%;
+  color: #495057;
+}
+
+.botones-div{
+  top: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 10px;
+  margin: 10px;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+}
+
+.btn-azul {
+  padding: 24px;
+  gap: 8px;
+  width: 332px;
+  height: 67px;
+  background: #0A3871;
+  border-radius: 24px;
+  margin: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #0A3871;
+}
+
+.btn-blanco {
+  padding: 24px;
+  gap: 8px;
+  width: 332px;
+  height: 67px;
+  border: 1px solid #0A3871;
+  border-radius: 24px;
+  margin: 10px;
+  color: #0A3871;
+  text-align: center;
+  cursor: pointer;
+} 
+
+.canvas {
+  position: absolute;
+  width: 70%;
+  height: auto;
+  left: 15%;
+  right: 15%;
+}
+
+#horca{
+  width: 60%;
+  height: 100%;
+}
+.botones-div-canvas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 10px;
+  margin: 10px;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+}
+/*
+.canvas{
+  position: absolute;
+  left: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translate(-50%, -40%);
+  top: 30%;
+}
+
+#horca{
+  width: 55%;
+  height: 100%;
+}
+
+.canvas {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  height: auto;
+}
+
+.botones-div-canvas {
+  top: 220%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 10px;
+  margin: 10px;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+}
+
+ #horca {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  right: 10%;
+  top: 17%;
+} 
+.canvas{
+  width: 100%;
+  left: 50%;
+  height: auto;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translate(-50%, -40%);
+  top: 30%;
+} 
+
+#horca{
+  width: 55%;
+  height: 100%;
+}
+*/
+.footer {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  padding: 20px 0;
+  color: #F3F5FC;
+}
+
+.footer a {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  line-height: 36px;
+  cursor: pointer;
+  transition: all ease-in-out .3s;
+  margin-top: 20px;
+  margin-right: 5px;
+  margin: 5px;
+  text-align: center;
+  align-items: center;
+}
+
+.footer a:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+
+/*
+.botones-div-canvas{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  position: absolute;
+  width: 680px;
+  height: 67px;
+  left: 28.5rem;
+  top: 760px;
+  margin-bottom: 25px;
+}*/
+ 
+
+/* Portrait tablet to landscape and desktop */
+/*
+
+@media (min-width: 481px) and (max-width: 796px) {
+  .logo{
+    left: 40px;
+    right: 37.43%;
+    top: 40px;
+    bottom: 0%;
+    width: 50px;
+    height: 50px;
+  } 
+  .botones-home{
+    top: 16rem;
+    left: 12.2rem;
+  }
+  .btn-palabra{
+    width: 270px;
+    height: 67px;
+    top:7rem;
+    left:0.7rem;
+    font-size: 22px;
+    line-height: 20px;
+  }
+  .btn-iniciar{
+    width: 289px;
+    height: 100px;
+    top: 0;
+    font-size: 22px;
+    line-height: 20px;
+  }
+  .btn-azul{
+    width: 300px;
+    height: 67px;
+    left: 31.5%;
+    top: 450px;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 25px;
+  }
+  .btn-blanco{
+    width: 300px;
+    height: 67px;
+    left: 20px;
+    top: 450px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  
+  label {
+    padding-left: 3rem;
+    font-size:18px;
+   }
+   .form-group{
+    left: 1.5rem;
+    top: 710px;
+   }
+   .botones-div{
+    width: 680px;
+    height: 57px;
+    left: 0.5rem;
+    top: 740px; 
+   }
+   .text-input {
+    width: 550px;
+    height: auto;
+    left: 2rem;
+    top: 200px;
+    font-size:32px;
+     }
+     .img-alerta{
+      left: 1rem;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;   
+    }
+    .canvas{
+      margin-left: -4rem;
+      width: 739px;
+      height:800px
+    }
+    .botones-div-canvas{
+      width: 680px;
+      height: 67px;
+      left: 9rem;
+      top:64rem;
+     }
+ }
+
+
+/* Smartphones (portrait and landscape) ----------- */
+/*
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  body{
+    min-width: 375px;
+    min-height: 667px;
+  }
+  .logo{
+    left: 4.27%;
+    right: 87.2%;
+    top: 25px;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+  } 
+  .botones-home{
+    top: 16rem;
+    left: 4.2rem;
+  }
+  .btn-palabra{
+    width: 200px;
+    height: 57px;
+    left: 1rem;
+    top: 6.5rem;
+    font-size: 16px;
+    line-height: 0px;
+  }
+  .btn-iniciar{
+  width: 230px;
+  height: 90px;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+  line-height: 10px;
+  }
+  .btn-azul{
+    width: 300px;
+    height: 57px;
+    left: 0;
+    top: 450px;
+    font-size: 18px;
+    line-height: 20px;    
+  }
+  .btn-blanco{
+    width: 300px;
+    height: 57px;
+    left: 0;
+    top: 480px;
+    font-size: 18px;
+    line-height: 20px;    
+  }
+  label {
+    width: 200px;
+    height: 18px;
+    left: 16px;
+    top: 451px;
+    font-size:18px;
+    padding-left: 2.5rem;
+   }
+   .form-group{
+    left: 16px;
+    top: 451px;
+   }
+   .botones-div{ 
+    flex-wrap: wrap; 
+    width: 343px;
+    height: 158px;
+    left: 0;
+    top: 30rem;    
+   }
+   .text-input { 
+    width: 343px;
+    height: auto;
+    left: 16px;
+    top: 152px;
+    font-size:32px;
+    line-height: 150%;
+    }
+    .palabra-nueva{
+      top:0.4rem;
+      left: 0.1rem;
+    }
+     .img-alerta{
+      left: 1rem;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;   
+    }
+    .canvas{
+      margin-left: 2.5rem;
+      width: 1024px;
+      height:800px
+    }
+    .botones-div-canvas{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    
+      position: absolute;
+      width: 680px;
+      height: 67px;
+      left: 28.5rem;
+      top: 760px;
+      margin-bottom: 25px;
+     }
+ }
+
+*/
